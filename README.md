@@ -7,6 +7,8 @@ Dette er en eksperiementell plugin til QGIS for å hente vektordata fra Nasjonal
 3. Start QGIS, og aktiver pluginen gjennom Programtillegg-menyen
 
 
+NB: Pluginen er avhengig av at Python-modulen [requests](http://docs.python-requests.org/en/latest/) er installert. 
+
 ## Brukerveiledning (under utarbeidelse)
 
 1. Start ved å velge NVDB Plugin fra Programtillegg-menyen
@@ -22,9 +24,9 @@ Pluginen er laget på bakgrunn av maler produsert av [Plugin Builder](http://plu
 
 For å videreutvikle pluginen, må det tas utgangspunkt i følgende filer: 
 
-nvdb.py - Inneholder logikk
-ui_nvdb.ui - UI-fil laget i QT Designer
-compile.bat - Denne må kjøres om .ui-filen endres, for å generere en ny ui_nvdb.py. 
+* nvdb.py - Inneholder logikk
+* ui_nvdb.ui - UI-fil laget i QT Designer
+* compile.bat - Denne må kjøres om .ui-filen endres, for å generere en ny ui_nvdb.py. 
 
     
     
