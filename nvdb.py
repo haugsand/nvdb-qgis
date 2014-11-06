@@ -176,13 +176,12 @@ class Nvdb:
                 sted += '/'+str(self.fylke)
                 if self.kommune != 0:
                     sted += '/'+str(self.kommune)
-
-            api = 'http://vegnett.vegdata.no/nvdb/api/vegnett'
-            uri = api+sted+'.json?kategori='+vegkategori
             
-            r = requests.get(uri, verify=False)
-            data = r.text
-        
+            path = '/vegnett'+sted+'.json?kategori='+vegkategori          
+            vegnett = query(path)
+            data = json.dumps(vegnett)
+            
+
         # Registrerer lag i QGIS
         lag = QgsVectorLayer(data, navn, 'ogr')
         QgsMapLayerRegistry.instance().addMapLayer(lag)
@@ -283,6 +282,7 @@ class Nvdb:
             pass
             
         self.geojson['features'].append(rad)
+               
         
         
     def unload(self):
