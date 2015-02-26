@@ -280,6 +280,13 @@ class Nvdb:
                 rad['properties'][egenskap['navn']] = egenskap['verdi']
         except KeyError:
             pass
+        
+        rad['properties']['Objektid'] = objekt['objektId']
+        
+        try:
+            rad['properties']['Strekningslengde'] = objekt['strekningslengde']
+        except KeyError:
+            pass
             
         self.geojson['features'].append(rad)
                
