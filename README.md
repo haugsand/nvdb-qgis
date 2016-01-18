@@ -1,5 +1,7 @@
 Dette er en eksperiementell plugin til QGIS for å hente vektordata fra Nasjonal vegdatabank (NVDB).
 
+NB: Pluginen forvaltes i et annet repo: https://github.com/nvdb-vegdata/nvdb-qgis 
+
 ## Installasjonsveiledning
 
 1. Opprett en ny mappe i plugin-katalogen til QGIS. Eksempel: C:\Users\<brukernavn>\.qgis2\python\plugins\<Nvdb>
